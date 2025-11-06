@@ -59,10 +59,10 @@ def writeToFile(file, roles, replicas): #zapis v fail
         print("Сценарий готов и записан в файл out.txt")
    
 def main():
-        with open('c:/Users/medve/OneDrive/Рабочий стол/git/дз - программирование/7. Дз работа с файлами/roles.txt', 'r', encoding='utf-8') as file:
+        with open('/7. Дз работа с файлами/roles.txt', 'r', encoding='utf-8') as file:
             lines = file.readlines()[1:]
         
-        with open('c:/Users/medve/OneDrive/Рабочий стол/git/дз - программирование/7. Дз работа с файлами/out.txt', 'w', encoding='utf-8') as outFile:
+        with open('/7. Дз работа с файлами/out.txt', 'w', encoding='utf-8') as outFile:
             roles, lastLine = findAllRoles(lines)
             replicas = numerateReplicasAndAddReplicasToRoles(lines, lastLine, roles)
             writeToFile(outFile, roles, replicas)
