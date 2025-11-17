@@ -1,0 +1,45 @@
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.flags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flag-item {
+    text-align: center;
+}
+
+.flag {
+    width: 200px;
+    height: 120px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.france {
+    background: linear-gradient(to right, #0055A4 33%, white 33%, white 66%, #EF4135 66%);
+}
+
+.germany {
+    background: linear-gradient(to bottom, black 33%, #DD0000 33%, #DD0000 66%, #FFCE00 66%);
+}
+
+.italy {
+    background: linear-gradient(to right, #009246 33%, white 33%, white 66%, #CE2B37 66%);
+}
+
+.japan {
+    background: radial-gradient(circle, #BC002D 30px, white 30px);
+}
+
+.russia {
+    background: linear-gradient(to bottom, white 33%, #0039A6 33%, #0039A6 66%, #D52B1E 66%);
+}
+
+.trinidad {
+    background: linear-gradient(45deg, transparent 45%, #CE1126 45%, #CE1126 55%, transparent 55%), linear-gradient(transparent 45%, transparent 55%), #000000;
+}

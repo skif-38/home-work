@@ -1,0 +1,94 @@
+body {
+    background-color: #5CDB95;
+    font-family: Arial, sans-serif;
+    font-size: 16pt;
+    color: #EDF5E1;
+    text-align: left;
+}
+.main-menu {
+    position: absolute;
+    width: 30%;
+    height: calc(100% - 104px);
+    padding: 10px;
+    padding-left: 30px;
+    background-color: #05386B;
+    list-style: none;
+    left: -100%;
+    visibility: hidden;
+    transition-duration: 1s;
+}
+.sub-menu{
+    display: none;
+    visibility: hidden;
+    list-style: none;
+}
+.main-menu li:hover .sub-menu{
+    display: block;
+    visibility: visible;
+}
+.sub-sub-menu{
+    display: none;
+    list-style: none;
+}
+
+.sub-menu li:hover .sub-sub-menu{
+    display: block;
+}
+
+.main-menu li{
+    margin-top: 10px;
+}
+
+#ham-check{
+    opacity:0;
+}
+
+.ham-button{
+    display:block;
+    position: relative;
+    width:30px;
+    height: 30px;
+}
+
+.ham-button>span::after,
+.ham-button>span::before,
+.ham-button>span{
+    display:block;
+    position:absolute;
+    width:45px;
+    height: 9px;
+    background-color: #05386B;
+    transition-duration:1s;
+}
+
+.ham-button > span::before{
+    top:-15px;
+    content:"";
+    transition-duration:1s;
+}
+
+.ham-button > span::after{
+    top:15px;
+    content:"";
+    transition-duration:1s;
+}
+
+#ham-check:checked ~ .main-menu{
+    left:0;
+    visibility:visible;
+    transition-duration:1s;
+}
+
+#ham-check:checked ~ .ham-button > span::after{
+    top:0px;
+    rotate: 90deg;
+    transition-duration:1s;
+}
+#ham-check:checked ~ .ham-button > span{
+    rotate: -45deg;
+    transition-duration:1s;
+}
+#ham-check:checked ~ .ham-button > span::before{
+    top:0;
+    transition-duration:1s;
+}
